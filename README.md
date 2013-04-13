@@ -33,4 +33,34 @@ The point of this example is ensuring conditional synchronization.
 
 Uses ```ReentrantLock``` and ```Condition``` variables.
 
+## RaceCondition
+
+This example shows how to prevent race conditions and waiting threads using different approaches.
+
+Having two threads, one which increases the value and one which decreases the value of a shared variable, and increasing/decreasing the same amount, final value of variable should be the initial one (```0```) and should be printed at the end by the main thread.
+
+### RaceCondition5A
+
+Solves problem using a monitor and joining threads.
+
+Uses only ```synchronized``` methods and ```join```.
+
+### RaceCondition 6AB
+
+Solves problem using a monitor and a CountDownLatch.
+
+Uses ```synchronized``` methods and ```CountDownLatch```.
+
+### RaceCondition5B
+
+Solves problem using an atomic variable and joining threads.
+
+Uses ```AtomicInteger``` and ```join```.
+
+### RaceCondition6BB
+
+Solves problem using an atomic variable and a CountDownLatch.
+
+Uses ```AtomicInteger``` and ```CountDownLatch```.
+
 [1]: #synchronouslink "Synchronous Link"
