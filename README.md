@@ -21,4 +21,16 @@ conditional synchronization.
 
 Uses only ```synchronized``` methods, ```wait``` and ```notify```.
 
+## Crosswalk
+
+This example shows how to solve the crosswalk problem.
+
+In a crosswalk where only can cross either cars or pedestrians but not both, there are some pedestrian threads and car threads. Any thread can try to cross the crosswalk while there might be other threads crossing it.
+
+When there are cars crossing the crosswalk only cars can enter in the crosswalk. When there are pedestrians crossing the crosswalk cars cannot enter in. Cars have priority so pedestrians cannot enter in the crosswalk if there are cars waiting to enter.
+
+The point of this example is ensuring conditional synchronization.
+
+Uses ```ReentrantLock``` and ```Condition``` variables.
+
 [1]: #synchronouslink "Synchronous Link"
